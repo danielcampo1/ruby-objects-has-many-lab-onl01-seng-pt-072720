@@ -20,7 +20,7 @@ class Author
 
     def add_post_by_title(title)
         post = Author.new(title)
-        add_post(title)
+        add_post(post)
     end
     
 
