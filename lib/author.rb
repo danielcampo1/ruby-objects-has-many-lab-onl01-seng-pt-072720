@@ -5,6 +5,14 @@ class Author
             @name = name
             @posts = []
         end
+        
+        def songs
+    Song.all.select do |song|
+      song.artist == self
+    end
+  end
+        
+        
 
     def add_post(post)
         @posts << post
@@ -16,11 +24,6 @@ class Author
         add_post(title)
     end
     
-    def post
-    Post.all.select do |post|
-      post.author == self
-      end
-   end
 
 
     def self.post_count
